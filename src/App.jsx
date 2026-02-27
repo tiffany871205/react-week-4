@@ -213,10 +213,10 @@ function App() {
   // 打開 modal
   const openModal = (type, product) => {
     setModalType(type);
-    setTemplateProduct((pre) => ({
-      ...pre,
+    setTemplateProduct({
+      ...INITIAL_TEMPLATE_DATA,
       ...product,
-    }));
+    });
     productModalRef.current.show();
   };
 
